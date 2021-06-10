@@ -34,7 +34,7 @@
     0% { transform: rotate(0);}
     100% { transform:rotate(360deg);}
 }
-/* .leftside img{animation: heartbeat 5s linear infinite;}
+ .leftside img{animation: heartbeat 5s linear infinite;}
 @keyframes heartbeat
 {
   0%{ transform:scale(.75);}
@@ -43,7 +43,7 @@
   60%{ transform:scale(1);}
   80%{ transform:scale(.75);}
   100%{transform:scale(.75);}
-} */
+} 
 /* corona update */
 .corona_update{
     margin: 30px 0 30px 0;
