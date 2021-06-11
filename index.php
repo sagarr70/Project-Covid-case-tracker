@@ -23,13 +23,13 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#aboutid">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Symptoms</a>
+                    <a class="nav-link" href="#sympid">Symptoms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Prevention</a>
+                    <a class="nav-link" href="#preventid">Prevention</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -43,7 +43,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#contactid">Contact</a>
                 </li>
             </ul>
 
@@ -75,12 +75,12 @@
     </div>
     <!-- Main header ends -->
     <!-- Covid latest updates  -->
-    <section class="corona_update">
+    <section class="corona_update" id="home">
         <div class="mb-3">
             <h3 class="text-uppercase text-center">Covid-19 Updates</h3>
             <hr>
         </div>
-        <div class="d-flex justify-content-around align-items-center caseno" ;>
+        <div class="d-flex justify-content-around align-items-center  count_style" ;>
             <div>
                 <h1 class="count">29191213</h1>
                 <p class="cc">Confirmed cases <img src="https://img.icons8.com/carbon-copy/100/000000/coronavirus.png"
@@ -120,12 +120,13 @@
             <hr>
         </div>
         <div class="row pt-5">
-            <div class="col-lg-5 col-md-6 col-12 ml-5">
-                <img src="images/sars.jpg" alt="" class="img-fluid">
+            <div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
+                <img src="images/sars.jpg" height="300" width="350" alt="" class="img-fluid">
+                <hr>
             </div>
 
             <div class="col-lg-6 col-md-6 col-12">
-
+                
                 <h2>What is Covid-19?</h2>
                 <p>COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2. WHO first learned of this new
                     virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan,
@@ -141,7 +142,7 @@
     </div>
     <!-- About ends -->
     <!-- Covid Symptoms-->
-    <div class="container-fluid  pt-5 pb-5" id="aboutid">
+    <div class="container-fluid  pt-5 pb-5" id="sympid">
         <div class="section_header text-center mb-5 mt-4">
             <h1>Common Covid Symptoms</h1>
             <hr>
@@ -259,7 +260,7 @@
     </div>
     <!-- Covid Symptoms end -->
     <!-- 6 step prevention -->
-    <div class="container-fluid sub_section pt-5 pb-5" id="aboutid">
+    <div class="container-fluid sub_section pt-5 pb-5" id="preventid">
 
         <div class="section_header text-center mb-5 mt-4">
             <h1>6 Steps Prevention Against Coronavirus</h1>
@@ -376,7 +377,7 @@
 
                         <div class="col-lg8 col-md-8 col-12">
 
-                            <p> Stay informed by watching or readinf news & follow the recommended practices</p>
+                            <p> Stay informed by watching or reading news & follow the recommended practices</p>
 
                         </div>
 
@@ -422,7 +423,7 @@
     </div>
     <!-- 6 step prevention ends -->
     <!-- contact -->
-    <div class="container-fluid  pt-5 pb-5" id="aboutid">
+    <div class="container-fluid  pt-5 pb-5" id="contactid">
 
         <div class="section_header text-center mb-5 mt-4">
             <h1>Contact if medical help needed</h1>
@@ -433,17 +434,73 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-12">
 
-                    <form>
+                    <form action="" method="POST">
+
+
+
+
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com">
+                            <label>Username</label>
+                            <input type="text" class="form-control" name="username" placeholder="name"
+                                autocomplete="off" required>
                         </div>
-                       
+
+
+
+
+
+
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="name@example.com"
+                                required autocomplete="off">
                         </div>
+
+                        <div class="form-group">
+                            <label>Mobile</label>
+                            <input type="number" class="form-control" name="mobile" placeholder="mobile"
+                                autocomplete="off" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Select Symptoms</label>
+                            <br>
+                            <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                                <input type="checkbox" class="custom-control-input" id="customcheckbox1"
+                                    name="coronasym[]" value="fever">
+                                <label for="customcheckbox1" class="custom-control-label">Fever</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                                <input type="checkbox" class="custom-control-input" id="customcheckbox2"
+                                    name="coronasym[]" value="tired">
+                                <label for="customcheckbox2" class="custom-control-label">Feeling Weak</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                                <input type="checkbox" class="custom-control-input" id="customcheckbox3"
+                                    name="coronasym[]" value="cold">
+                                <label for="customcheckbox3" class="custom-control-label">Cold</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+                                <input type="checkbox" class="custom-control-input" id="customcheckbox4"
+                                    name="coronasym[]" value="Breath"> 
+                                <label for="customcheckbox4" class="custom-control-label">Breathing-difficulty</label>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Describe Symptoms</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="msg"
+                                rows="3"></textarea>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+
                     </form>
 
 
@@ -467,8 +524,54 @@
     </div>
 
 
+    <!-- Top cursor -->
+
+    <div class="container scrolltop float-right pr-5">
+
+        <i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i>
+    </div>
 
 
+
+
+    <!-- Footer -->
+
+
+    <footer class="mt-5">
+        <div class="footer_style text-white text-center container-fluid">
+            <p>Project by Sagar Aggarwal</p>
+
+
+        </div>
+
+
+
+
+    </footer>
+
+    <script type="text/javascript">
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    </script>
 
 
 
@@ -476,3 +579,65 @@
 </body>
 
 </html>
+
+
+
+
+
+<?php
+include 'dbcon.php';
+if(isset($_POST['submit']))
+{
+   $username =$_POST['username'];
+   $email =$_POST['email'];
+   $mobile =$_POST['mobile'];
+   $symp =$_POST['coronasym'];
+   $msg =$_POST['msg'];
+
+    $chk = "";
+    foreach($symp as $chk1)
+    {
+        $chk .=$chk1.",";
+    }
+    $insertquery = " insert into coronacase(username,email,mobile,symp,message) values('$username','$email','$mobile','$chk','$msg)";
+     
+    $query = mysqli_query($con,$insertquery);
+
+    if($query){
+        ?>
+<script>
+alert("insert successful");
+</script>
+
+
+<?php
+   
+   }
+   else{
+        ?>
+<script>
+alert("insert not successful")
+</script>
+
+
+<?php
+   
+   
+   }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+?>
