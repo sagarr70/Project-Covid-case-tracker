@@ -126,7 +126,7 @@
             </div>
 
             <div class="col-lg-6 col-md-6 col-12">
-                
+
                 <h2>What is Covid-19?</h2>
                 <p>COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2. WHO first learned of this new
                     virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan,
@@ -482,7 +482,7 @@
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
                                 <input type="checkbox" class="custom-control-input" id="customcheckbox4"
-                                    name="coronasym[]" value="Breath"> 
+                                    name="coronasym[]" value="Breath">
                                 <label for="customcheckbox4" class="custom-control-label">Breathing-difficulty</label>
                             </div>
 
@@ -593,16 +593,21 @@ if(isset($_POST['submit']))
    $mobile =$_POST['mobile'];
    $symp =$_POST['coronasym'];
    $msg =$_POST['msg'];
-
+   
+ 
     $chk = "";
     foreach($symp as $chk1)
     {
         $chk .=$chk1.",";
     }
-    $insertquery = " insert into coronacase(username,email,mobile,symp,message) values('$username','$email','$mobile','$chk','$msg)";
-     
-    $query = mysqli_query($con,$insertquery);
+    $insertquery = " insert into coronacase(username,email,mobile,symp,message) values('$username','$email','$mobile','$chk','$msg')";
+     if($con->query($insertquery)===TRUE){
 
+     }else{
+         echo $con->error;
+     }
+    $query = mysqli_query($con,$insertquery);
+    
     if($query){
         ?>
 <script>
