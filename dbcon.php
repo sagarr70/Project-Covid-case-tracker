@@ -8,7 +8,7 @@ $con=mysqli_connect($server,$user,$password,$db);
 if($con){
      ?>
       <script>
-          alert("connection successful");
+         // alert("connection successful");
       </script>
 
 
@@ -18,7 +18,7 @@ if($con){
 else{
      ?>
      <script>
-         alert("connection not successful")
+    //     alert("connection not successful")
      </script>
 
 

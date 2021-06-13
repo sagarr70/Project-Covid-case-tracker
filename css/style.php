@@ -128,4 +128,22 @@ html{
 .count_style p{ text-align: center;}
 .about_res{margin-left: 0!important;}
 }
+
+
+
+.confirmed{
+    color: red;
+}
+.recovered{
+    color: green;
+}
+.dead{
+    color: darkred;
+}
+.world{
+    font-size: 50px;
+    text-align: center;
+    
+}
+
 </style>

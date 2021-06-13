@@ -37,8 +37,8 @@
                         Live Tracker
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Country Wise</a>
-                        <a class="dropdown-item" href="#">Indian Statewise</a>
+                        <a class="dropdown-item" href="coronaworld.php">Country Wise</a>
+                        <a class="dropdown-item" href="coronaindia.php">Indian Statewise</a>
 
                     </div>
                 </li>
@@ -80,35 +80,20 @@
             <h3 class="text-uppercase text-center">Covid-19 Updates</h3>
             <hr>
         </div>
-        <div class="d-flex justify-content-around align-items-center  count_style" ;>
-            <div>
-                <h1 class="count">29191213</h1>
-                <p class="cc">Confirmed cases <img src="https://img.icons8.com/carbon-copy/100/000000/coronavirus.png"
-                        width="30" height="30" />
-                </p>
+        <div class="row pt-5">
+            <div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
+               
+               <a href="coronaworld.php"class="text-uppercase text-center"><img src="https://img.icons8.com/wired/512/000000/world-map.png"height="300" width="350"/>  Worldwide</a>
+                <hr>
+            </div>
+            
+            <div class="col-lg-6 col-md-6 col-12">
 
+            <a href="coronainida.php"><img src="https://img.icons8.com/color/480/000000/india-circular.png" height="300" width="300"/> Indian State-wise</a>
+            <hr>
             </div>
 
-            <div>
-                <h1 class="count">1171615</h1>
-                <p class="ac">Active <img src="https://img.icons8.com/ios-filled/50/000000/patient-oxygen-mask.png"
-                        width="30" height="30" /></p>
-            </div>
-
-            <div>
-                <h1 class="count">27648076</h1>
-                <p class="re">Recovered <img src="https://img.icons8.com/offices/30/000000/aed.png" width="30"
-                        height="30" /></p>
-            </div>
-
-            <div>
-                <h1 class="count">359857</h1>
-                <p class="de">Deceased <img src="https://img.icons8.com/pastel-glyph/64/000000/crossbones.png"
-                        height="30" width="30" /></p>
-            </div>
-
-
-        </div>
+        </div>   
 
     </section>
     <!-- Updates end -->
@@ -601,17 +586,13 @@ if(isset($_POST['submit']))
         $chk .=$chk1.",";
     }
     $insertquery = " insert into coronacase(username,email,mobile,symp,message) values('$username','$email','$mobile','$chk','$msg')";
-     if($con->query($insertquery)===TRUE){
-
-     }else{
-         echo $con->error;
-     }
+     
     $query = mysqli_query($con,$insertquery);
     
     if($query){
         ?>
 <script>
-alert("insert successful");
+alert("Submitted successfully");
 </script>
 
 
