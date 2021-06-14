@@ -89,7 +89,7 @@
             
             <div class="col-lg-6 col-md-6 col-12">
 
-            <a href="coronainida.php"><img src="https://img.icons8.com/color/480/000000/india-circular.png" height="300" width="300"/> Indian State-wise</a>
+            <a href="coronaindia.php"><img src="https://img.icons8.com/color/480/000000/india-circular.png" height="300" width="300"/> Indian State-wise</a>
             <hr>
             </div>
 
