@@ -76,7 +76,7 @@
         <div class="table-responsive">
             <table class="table table-bordered table-striped text-center" id="tbval">
                 <tr>
-                    <th class="text-capitalize">Country</th>
+                    <th class="text-capitalize">State</th>
                     <th class="text-capitalize confirmed">Total Confirmed<img
                             src="https://img.icons8.com/carbon-copy/100/000000/coronavirus.png" width="30"
                             height="30" /></th>
